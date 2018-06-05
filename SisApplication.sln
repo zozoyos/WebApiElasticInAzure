@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisBatchApp", "SisBatchApp\SisBatchApp.csproj", "{5A534101-B84B-47CF-8EA6-AB351772C5EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisDAL", "SisDAL\SisDAL.csproj", "{DFE79F00-5DAC-4758-8718-ED887890FFAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisWebApi", "SisWebApi\SisWebApi.csproj", "{F9DBA71E-8C5C-4B22-A3BA-87CC06DAA1BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A534101-B84B-47CF-8EA6-AB351772C5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A534101-B84B-47CF-8EA6-AB351772C5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A534101-B84B-47CF-8EA6-AB351772C5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A534101-B84B-47CF-8EA6-AB351772C5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE79F00-5DAC-4758-8718-ED887890FFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE79F00-5DAC-4758-8718-ED887890FFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE79F00-5DAC-4758-8718-ED887890FFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE79F00-5DAC-4758-8718-ED887890FFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9DBA71E-8C5C-4B22-A3BA-87CC06DAA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9DBA71E-8C5C-4B22-A3BA-87CC06DAA1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9DBA71E-8C5C-4B22-A3BA-87CC06DAA1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9DBA71E-8C5C-4B22-A3BA-87CC06DAA1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
