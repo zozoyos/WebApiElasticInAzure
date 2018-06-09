@@ -8,11 +8,11 @@ namespace SisDAL.Consts
 {
     public static class LogInConstData
     {
-        public const string URL = "http://23.97.183.56:9200/";
+        public const string URL = "############";
 
-        public const string UserName = "elastic";
+        public const string UserName = "############";
 
-        public const string Password = "300278298d";
+        public const string Password = "############";
 
         public const string indexName = "s_i_s";
 
