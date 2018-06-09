@@ -48,7 +48,7 @@ namespace SisWebApi.Controllers
             }
             var searchResponse = EsClient.Search<MeasurmentsData>(s => s
                 .Size(10000)
-                .MatchAll(x => x)
+                .MatchAll(x => x).Sort(y => y.Descending(z => z.Time))
                 );
             if (searchResponse.Documents.Count > 0)
             {
@@ -74,7 +74,7 @@ namespace SisWebApi.Controllers
                         .Field(f => f.UserId)
                         .Query(id)
                     )
-                ).Size(100000)
+                ).Size(10000).Sort(x => x.Descending(f => f.Time))
             );
             if (searchResponse.Documents.Count > 0)
             {
