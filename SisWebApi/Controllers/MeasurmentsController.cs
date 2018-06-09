@@ -39,9 +39,30 @@ namespace SisWebApi.Controllers
             }
         }
 
-
         // GET: api/Measurments
-        public IHttpActionResult Get([FromUri]int userId)
+        public IEnumerable<MeasurmentsData> Get()
+        {
+            if (EsNode == null)
+            {
+                InitElastic();
+            }
+            var searchResponse = EsClient.Search<MeasurmentsData>(s => s
+                .Size(10000)
+                .MatchAll(x => x)
+                );
+            if (searchResponse.Documents.Count > 0)
+            {
+                return searchResponse.Documents.ToList();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        // GET: api/Measurments/1
+        public IHttpActionResult Get([FromUri]string id)
         {
             if (EsNode == null)
             {
@@ -51,9 +72,9 @@ namespace SisWebApi.Controllers
                 .Query(q => q
                     .Match(m => m
                         .Field(f => f.UserId)
-                        .Query(userId.ToString())
+                        .Query(id)
                     )
-                )
+                ).Size(100000)
             );
             if (searchResponse.Documents.Count > 0)
             {
@@ -64,6 +85,8 @@ namespace SisWebApi.Controllers
                 return NotFound();
             }
         }
+
+        
 
         // POST: api/Measurments
         public IHttpActionResult Post([FromBody]MeasurmentsData md)
